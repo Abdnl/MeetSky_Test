@@ -2,7 +2,6 @@ package pages;
 
 public class Test {
 
-    Mustafa was hier.
 
 
 
@@ -11,6 +10,7 @@ public class Test {
     public static void main(String[] args) {
 
     }
+
 
 
 }
