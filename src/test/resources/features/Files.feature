@@ -7,7 +7,7 @@ Feature: As a user, I should be able to upload a file, move or delete any select
 
   Background:
     Given the user is on the login page
-    And the user enters the driver information
+    And the user enters the employee information
     Then the user should be able to login
 
   @file
