@@ -2,7 +2,9 @@ package com.meetSky.pages;
 
 import com.meetSky.utilities.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.FindBy;
 
 
 
@@ -10,6 +12,11 @@ public abstract class BasePage {
     public BasePage() {
         PageFactory.initElements(Driver.get(), this);
     }
+
+    @FindBy(xpath = "//span[@class='icon icon-add']")
+    public WebElement filePlus;
+
+
 
     public void navigateToModule(String module) {
         String Module = module.substring(0, 1).toUpperCase() + module.substring(1).toLowerCase();
