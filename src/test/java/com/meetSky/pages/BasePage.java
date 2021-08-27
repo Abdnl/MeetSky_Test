@@ -16,6 +16,23 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[@class='icon icon-add']")
     public WebElement filePlus;
 
+    @FindBy(css = "input[type=file]")
+    public WebElement fileUpload;
+
+    @FindBy(xpath = "//span[@class='displayname'][1]")
+    public WebElement uploadFile;
+
+    public void fileUpload(String fileName){
+       String desktopFilePath = "C://Users//Administrator//Desktop//"+fileName+".txt";
+       fileUpload.sendKeys(desktopFilePath);
+
+
+    }
+
+
+
+
+
 
 
     public void navigateToModule(String module) {

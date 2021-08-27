@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@login"
+        tags = "@file"
 
 
 
