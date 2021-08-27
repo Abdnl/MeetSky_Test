@@ -19,12 +19,17 @@ public abstract class BasePage {
     @FindBy(css = "input[type=file]")
     public WebElement fileUpload;
 
-    @FindBy(xpath = "//span[@class='displayname'][1]")
-    public WebElement uploadFile;
+    @FindBy(xpath = "(//div[@class='file-name']/span)[1]")
+    public WebElement uploadedFile;
+
 
     public void fileUpload(String fileName){
-       String desktopFilePath = "C://Users//Administrator//Desktop//"+fileName+".txt";
-       fileUpload.sendKeys(desktopFilePath);
+       //String desktopFilePath = "C://Users//Administrator//Desktop//"+fileName+".txt";
+
+        String projectPath = System.getProperty("user.dir");
+        String filePath ="src/test/resources/"+fileName+".txt";
+        String projectFilePath = projectPath+"/"+filePath;
+        fileUpload.sendKeys(projectFilePath);
 
 
     }
