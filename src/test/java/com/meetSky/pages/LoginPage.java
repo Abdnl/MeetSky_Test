@@ -1,32 +1,38 @@
 package com.meetSky.pages;
 
 
-import com.meetSky.utilities.ConfigurationReader;
-import com.meetSky.utilities.Driver;
+
+
+import com.meetSky.utilities.*;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class LoginPage {
-    public LoginPage() {
+
+    public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
-    @FindBy(xpath = "//input[@name='user']")
-    public WebElement userNameBlock;
-    @FindBy(xpath = "//input[@name='password']")
-    public WebElement passWordBlock;
-    @FindBy(css = "#submit-form")
-    public WebElement loginBtn;
+
+    @FindBy(id="user")
+    public WebElement userName;
 
 
 
+    @FindBy(id="password")
+    public WebElement passWord;
 
-    public void loginAsEmployee(){
-        String userName = ConfigurationReader.get("employee_username");
-        String passWord = ConfigurationReader.get("employee_password");
-        userNameBlock.sendKeys(userName);
-        passWordBlock.sendKeys(passWord);
-        loginBtn.click();
+    @FindBy(id = "submit-form")
+    public WebElement submit;
+
+
+    public void login(String usernameStr, String passwordStr) {
+
+        userName.sendKeys(usernameStr);
+        passWord.sendKeys(passwordStr);
+        submit.click();
+        // verification that we logged
     }
+
+
 }

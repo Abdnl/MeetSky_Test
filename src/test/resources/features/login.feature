@@ -1,5 +1,7 @@
-Feature: Authorized Users should be able to login
+@login
+Feature: user should be able to login
 
-  @wip2
-  Scenario: Login as a user
-    Given user login with valid credentials
+  Scenario: login as a employee
+    Given the user is on the login page
+    And the user enters the driver information
+    Then the user should be able to login
