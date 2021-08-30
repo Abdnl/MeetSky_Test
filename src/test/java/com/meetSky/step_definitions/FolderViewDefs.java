@@ -1,3 +1,4 @@
+
 package com.meetSky.step_definitions;
 
 
@@ -14,7 +15,8 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FolderViewDefs {
+class FolderViewDefs {
+
     FolderPage folderPage=new FolderPage();
     List<String>actualNameOrders=new ArrayList<>();
     List<String> AfterClickName=new ArrayList<>();
