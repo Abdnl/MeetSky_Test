@@ -105,6 +105,7 @@ public class TalkFunctionalityDefs {
     }
 
 
+
     @Given("Navigate the url")
     public void navigateTheUrl() {
         String url = ConfigurationReader.get("url");
