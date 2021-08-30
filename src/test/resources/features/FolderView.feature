@@ -1,3 +1,4 @@
+@folderView
 Feature: change folder view
 
   Background:
@@ -20,6 +21,18 @@ Feature: change folder view
     |Talk |
     |BDD and Cucumber intorduction(1) |
     |Readme                           |
+
+  @size
+  Scenario: user can change folder view by Size dynamically
+    And the user should see files dynamically
+    Then the user clicks on Size
+    And the user should see changed files
+
+  @modified
+  Scenario: user can change folder view by Modified dynamically
+    And the user should see files dynamically
+    Then the user clicks on Modified
+    And the user should see changed files
 
 
 
