@@ -104,10 +104,7 @@ public class TalkFunctionalityDefs {
         new TalkFunctionaltyPage().getvideoCallScreen2();
     }
 
-    @Given("user login with valid credentials")
-    public void userLoginWithValidCredentials(String username,String password) {
-        new LoginPage().login(username,password);
-    }
+
 
     @Given("Navigate the url")
     public void navigateTheUrl() {
