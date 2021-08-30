@@ -17,11 +17,11 @@ public class LoginStepDefs {
     }
 
 
-    @And("the user enters the driver information")
-    public void the_user_enters_the_driver_information() {
+    @And("the user enters the employee information")
+    public void the_user_enters_the_employee_information() {
         // Write code here that turns the phrase above into concrete actions
-        String username=ConfigurationReader.get("driver_username");
-        String password=ConfigurationReader.get("driver_password");
+        String username=ConfigurationReader.get("employee_username");//  driver_username
+        String password=ConfigurationReader.get("employee_password"); //  driver_password
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
