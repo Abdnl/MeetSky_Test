@@ -3,8 +3,10 @@ Feature: Talk Functionality MeetSky
 
 
   Background:
-    Given Navigate the url
-    Given user login with valid credentials
+    Given the user is on the login page
+    And the user enters the employee information
+    Then the user should be able to login
+
 
   Scenario: Talk Functionality Conversation And start And leave video Call
     Given Meetsky Home page should contains title "Files - Meetsky - QA"
