@@ -106,6 +106,5 @@ public class ContactsPage extends BasePage{
         editButton.click();
         deleteButton.click();
     }
-
 }
 
